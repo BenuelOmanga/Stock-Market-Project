@@ -1,0 +1,23 @@
+# Virtual environments
+airflow_env/
+.venv/
+env/
+
+# Airflow remnants
+airflow/
+airflow.cfg
+airflow.db
+logs/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# OS-specific
+.DS_Store
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+
+# Power BI autosaves
+*.pbix~
