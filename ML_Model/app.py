@@ -2,10 +2,11 @@ import streamlit as st
 import pickle
 import numpy as np
 
-with open("Model/ridge_model.pkl", "rb") as file:
+# Load model from the same folder
+with open("ridge_model.pkl", "rb") as file:
     model = pickle.load(file)
 
-st.title("Stock Price Predictor (Ridge Regression)")
+st.title("📈 Stock Price Predictor (Ridge Regression)")
 st.markdown("Enter feature values to predict the stock's **closing price**.")
 
 # Input fields for each feature
@@ -24,4 +25,4 @@ for feature in features:
 if st.button("Predict"):
     input_array = np.array(inputs).reshape(1, -1)
     prediction = model.predict(input_array)[0]
-    st.success(f"Predicted Closing Price: **${prediction:.2f}**")
+    st.success(f"🎯 Predicted Closing Price: **${prediction:.2f}**")
